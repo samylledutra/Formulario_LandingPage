@@ -20,7 +20,7 @@ function Secao_Form() {
 		if (form.nome === "" || form.email === "")
 			alert("Preencha todos os campos");
 		else {
-			var templateParams = {
+			let templateParams = {
 				from_name: form.nome,
 				from_sobrenome: form.sobrenome,
 				from_email: form.email,
