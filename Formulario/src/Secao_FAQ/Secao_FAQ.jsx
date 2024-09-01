@@ -7,18 +7,22 @@ const FAQ = () => {
 
   const faqs = [
     {
+      id: 1,
       question: 'O pudim é feito de leite condensado?',
       answer: 'Sim, nosso pudim é feito com leite condensado e não contém adição de trigo ou amido de milho.'
     },
     {
+      id: 2,
       question: 'Quantas pessoas o pudim tamanho família serve?',
       answer: 'O pudim tamanho família serve de 6 a 8 pessoas, com porções de aproximadamente 125g por pessoa.'
     },
     {
+      id: 3,
       question: 'Vocês realizam entregas?',
       answer: 'Sim, realizamos entregas em Uberlândia, cobrindo 90% dos bairros.'
     },
     {
+      id: 4,
       question: 'Há cobrança de taxa de entrega?',
       answer: 'Sim, a taxa de entrega é terceirizada e calculada de acordo com o endereço de destino'
     }
@@ -31,17 +35,20 @@ const FAQ = () => {
         <hr></hr>
         <div className={css.faqItem}>
           {faqs.map((faq, index) => (
-            <div key={index}>
-              <div className={`${css.faqQuestion}  ${activeIndex === index ? 'active' : ''}`}
+            <div key={faq.id}>
+             <button
+                className={`${css.faqQuestion} ${activeIndex === index ? 'active' : ''}`}
                 onClick={() => setActiveIndex(activeIndex === index ? null : index)}
+                aria-expanded={activeIndex === index} 
               >
                 <span className={css.questionText}>{faq.question}</span>
                 <MdOutlineQuestionAnswer />
-              </div>
+                </button>
 
               <div
                 className={css.faqAnswer}
                 style={{ display: activeIndex === index ? 'block' : 'none' }}
+                aria-hidden={activeIndex !== index} 
               >
                 {faq.answer}
               </div>
