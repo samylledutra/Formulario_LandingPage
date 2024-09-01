@@ -1,8 +1,8 @@
 import React from 'react';
-import Secao_OndeComprar from './Secao_OndeComprar/Secao_ondeComprar.jsx';
-import Secao_Depoimentos from './Secao_Depoimentos/Secao_depoimentos.jsx';
-import Secao_FAQ from './Secao_FAQ/Secao_FAQ.jsx';
-import Secao_Form from './Secao_Form/Secao_Form.jsx';
+import SecaoOndeComprar from './Secao_OndeComprar/SecaoOndeComprar.jsx';
+import SecaoDepoimentos from './Secao_Depoimentos/SecaoDepoimentos.jsx';
+import SecaoFAQ from './Secao_FAQ/SecaoFAQ.jsx';
+import SecaoForm from './Secao_Form/SecaoForm.jsx';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./styles.css";
@@ -17,10 +17,10 @@ function App() {
   });
   return (
     <div>
-      <Secao_OndeComprar />
-      <Secao_Depoimentos />
-      <Secao_FAQ/>
-      <Secao_Form />
+      <SecaoOndeComprar />
+      <SecaoDepoimentos />
+      <SecaoFAQ/>
+      <SecaoForm />
 
     </div>
   );
