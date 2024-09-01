@@ -53,16 +53,16 @@ function Secao_Form() {
 				<div className={css.container}>
 					<div className={css.formContainer}>
 					<form className={css.form}>
-				<label htmlFor="">Digite o seu nome*</label>
+				<label htmlFor="nome">Digite o seu nome*</label>
 				<input type="text" name="nome" onChange={getData} />
 
-				<label htmlFor="">Digite o seu sobrenome*</label>
+				<label htmlFor="sobrenome">Digite o seu sobrenome*</label>
 				<input type="text" name="sobrenome" onChange={getData}/>
 
-				<label htmlFor="">Digite o seu e-mail*</label>
+				<label htmlFor="email">Digite o seu e-mail*</label>
 				<input type="email" name="email" onChange={getData} />
 
-				<label htmlFor="">Digite sua mensagem*</label>
+				<label htmlFor="mensagem">Digite sua mensagem*</label>
 				<input type="text" name="mensagem" onChange={getData} />
 
 				<input type="button" value="Enviar" onClick={validar} />
