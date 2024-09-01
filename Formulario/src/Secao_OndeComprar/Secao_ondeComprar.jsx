@@ -6,18 +6,21 @@ import css from "./Secao_ondeComprar.module.css";
 
 const ServiceData = [
   {
+    id: 1,
     title: "INSTAGRAM",
     description: "Veja e solicite em nosso perfil.",
     icon: <FaInstagram />,
     aosDelay: "300",
   },
   {
+    id: 2,
     title: "IFOOD",
     description: "Solicite agora pelo iFood!",
     icon: <SiIfood />,
     aosDelay: "500",
   },
   {
+    id: 3,
     title: "CARDÁPIO VIRTUAL",
     description: "Consulte nosso menu completo",
     icon: <BiFoodMenu />,
@@ -36,8 +39,8 @@ function OndeComprar() {
             Você pode encontrar nossos deliciosos pudins em diversas plataformas e canais de comunicação. Escolha o método que for mais conveniente para você e desfrute de nossos sabores irresistíveis.
           </p>
           <div className={css.cards} data-aos="fade-up" data-aos-delay="300">
-            {ServiceData.map((data, index) => (
-              <div key={index} className={css.card} data-aos="fade-up" data-aos-delay={data.aosDelay}>
+            {ServiceData.map((data) => (
+              <div key={data.id} className={css.card} data-aos="fade-up" data-aos-delay={data.aosDelay}>
                 {data.icon}
                 <h2 className={css.cardTitle}>{data.title}</h2>
                 <p className={css.cardDescription}>{data.description}</p>
